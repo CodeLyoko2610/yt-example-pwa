@@ -3,6 +3,12 @@ var pwaCardContent = pwaCard.querySelector('.card__content');
 var pwaCardDetails = pwaCard.querySelector('.card__details');
 var detailsShown = false;
 
+//Register the service worker
+//Check if the browser (navigator) supports service worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js'); //the pointer goes from root folder, then to sw.js file
+}
+
 pwaCard.addEventListener('click', function (event) {
   if (!detailsShown) {
     detailsShown = true;
