@@ -6,9 +6,10 @@ var detailsShown = false;
 //Register the service worker
 //Check if the browser (navigator) supports service worker
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js') //the pointer goes from root folder, then to sw.js file
+  navigator.serviceWorker
+    .register('/sw.js') //the pointer goes from root folder, then to sw.js file
     .then(function () {
-      console.log('Service Worker registered.') //chaining 1 function to log "Service Worker registered"
+      console.log('Service Worker registered.'); //chaining 1 function to log "Service Worker registered"
     });
 }
 
